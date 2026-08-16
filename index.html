@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>岡部のりゆき｜Illustrator</title>
+<meta name="description" content="岡部のりゆきのポートフォリオ。かわいいを余さず絵に。イラスト制作のご依頼・ご相談を承ります。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2a1420;
+  --wine-deep:#2b1420;
+  --wine:#5c2436;
+  --wine-mid:#7a3448;
+  --rose:#c98a9a;
+  --rose-dust:#8a6270;
+  --cream:#f7efe6;
+  --cream2:#fbf6f0;
+  --gold:#c8a262;
+  --gold-soft:#e4cfa0;
+  --line:#e4d6c8;
+  --max:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(calc(100% - 44px),var(--max));margin:auto}
+.serif{font-family:"Shippori Mincho",serif}
+
+/* ---- signature: bow-tie rule, echoes the ribbon each character wears ---- */
+.bow-rule{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto}
+.bow-rule::before,.bow-rule::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold));opacity:.75}
+.bow-rule::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.bow-rule svg{flex:none}
+.bow-rule.on-dark::before,.bow-rule.on-dark::after{background:linear-gradient(90deg,transparent,var(--gold-soft))}
+.bow-rule.on-dark.rev::after{background:linear-gradient(90deg,var(--gold-soft),transparent)}
+
+/* ---- header ---- */
+header{position:sticky;top:0;z-index:30;background:rgba(247,239,230,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none}
+.brand-jp{font-family:"Shippori Mincho",serif;font-weight:600;font-size:19px;letter-spacing:.08em;color:var(--wine)}
+.brand-en{font-size:9px;letter-spacing:.24em;color:var(--rose-dust)}
+.navlinks{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:700;letter-spacing:.03em}
+.navlinks a{text-decoration:none;color:var(--ink);opacity:.75}
+.navlinks a:hover{opacity:1}
+.nav-x{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--wine);color:var(--wine)!important;opacity:1!important;border-radius:999px;padding:8px 16px 8px 13px}
+.nav-x svg{width:11px;height:11px}
+.nav-x:hover{background:var(--wine);color:#fff!important}
+
+/* ---- hero ---- */
+.hero{position:relative;padding:88px 0 96px;overflow:hidden;color:var(--cream2);
+  background:radial-gradient(120% 90% at 78% 0%,#7a3448 0%,#4a2032 46%,#2b1420 100%);
+}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{font-size:10px;letter-spacing:.32em;color:var(--gold-soft);font-weight:700;margin-bottom:22px}
+.brand-name{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(38px,4.6vw,54px);letter-spacing:.1em;line-height:1.3;margin:0 0 4px}
+.brand-name .last{display:block;font-size:.5em;letter-spacing:.28em;color:var(--rose);margin-bottom:6px}
+.hero-divider{width:56px;height:1px;background:var(--gold);margin:26px 0}
+h1{font-family:"Shippori Mincho",serif;font-size:clamp(34px,4vw,48px);line-height:1.55;letter-spacing:.04em;color:var(--cream2);margin:0 0 26px;font-weight:600}
+h1 em{font-style:normal;color:var(--gold-soft)}
+.lead{font-size:14px;color:#e6cfd6;max-width:34em;margin:0 0 34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:2px;text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.05em;border:1px solid var(--gold);transition:.25s}
+.primary{background:var(--gold);color:#2b1420}
+.primary:hover{background:transparent;color:var(--gold-soft)}
+.secondary{background:transparent;color:var(--cream2);border-color:rgba(247,239,230,.4)}
+.secondary:hover{border-color:var(--cream2)}
+.x-btn{border-color:rgba(247,239,230,.4);color:var(--cream2)}
+.x-btn:hover{background:#fff;color:#2b1420;border-color:#fff}
+.x-btn svg{width:12px;height:12px}
+.hero-note{margin-top:16px;font-size:11px;color:#c9a6b2;letter-spacing:.02em}
+
+.hero-art{position:relative}
+.hero-frame{position:relative;border-radius:2px;overflow:hidden;box-shadow:0 30px 70px rgba(10,3,8,.45)}
+.hero-frame img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.hero-frame::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(232,209,163,.5)}
+.hero-frame::before{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,transparent,rgba(20,8,15,.55));pointer-events:none}
+.hero-badge{position:absolute;left:22px;bottom:22px;color:var(--cream2)}
+.hero-badge .en{font-size:9px;letter-spacing:.26em;color:var(--gold-soft);display:block;margin-bottom:4px}
+.hero-badge .jp{font-family:"Shippori Mincho",serif;font-size:14px;letter-spacing:.06em}
+
+/* ---- sections ---- */
+section{padding:100px 0}
+.on-cream{background:var(--cream)}
+.section-title{text-align:center;margin-bottom:52px}
+.section-title .en{font-size:10px;letter-spacing:.3em;color:var(--rose-dust);font-weight:700;display:block;margin-bottom:14px}
+h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,3vw,34px);letter-spacing:.06em;color:var(--wine);margin:14px 0 0;font-weight:600}
+
+/* ---- gallery ---- */
+.works-note{text-align:center;font-size:11.5px;color:var(--rose-dust);margin:-30px 0 44px;letter-spacing:.02em}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.work{position:relative}
+.work-frame{position:relative;overflow:hidden;background:#efe2d4;border:1px solid var(--line)}
+.work.featured .work-frame{border-color:var(--gold)}
+.work.featured .work-frame::after{content:"ORIGINAL";position:absolute;top:10px;left:10px;background:var(--gold);color:#2b1420;font-size:9px;letter-spacing:.14em;font-weight:700;padding:5px 9px}
+.work img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;transition:transform .5s ease}
+.work:hover img{transform:scale(1.045)}
+.work-info{padding:16px 2px 0;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.work-title{font-weight:700;color:var(--ink);font-size:13.5px;letter-spacing:.02em}
+.work-category{font-size:9.5px;color:var(--rose-dust);letter-spacing:.06em;white-space:nowrap}
+.work-category.oc{color:var(--wine);font-weight:700}
+
+/* ---- commission ---- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--cream2);padding:38px 32px}
+.card .num{font-family:"Shippori Mincho",serif;font-size:13px;color:var(--gold);letter-spacing:.1em;margin-bottom:14px;display:block}
+.card h3{font-family:"Shippori Mincho",serif;margin:0 0 12px;color:var(--wine);font-size:16.5px;font-weight:600;letter-spacing:.03em}
+.card p{margin:0;color:#6b5560;font-size:13px}
+.flow div{padding:11px 0;border-bottom:1px solid var(--line);font-size:12.5px;color:#6b5560;display:flex;gap:12px}
+.flow div:last-child{border-bottom:none}
+.flow b{font-family:"Shippori Mincho",serif;color:var(--wine);font-weight:600}
+
+/* ---- contact ---- */
+.contact{position:relative;padding:110px 0;color:var(--cream2);text-align:center;overflow:hidden;
+  background:radial-gradient(120% 100% at 50% 0%,#7a3448 0%,#4a2032 50%,#2b1420 100%);}
+.contact .wrap{position:relative}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact h2{color:var(--cream2);font-size:clamp(28px,4vw,42px)}
+.contact p{font-size:13.5px;color:#e6cfd6;max-width:32em;margin:22px auto 0}
+.contact-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:40px}
+.contact-note{margin-top:22px;font-size:11px;color:#c9a6b2}
+
+footer{text-align:center;padding:30px;color:var(--rose-dust);font-size:10.5px;background:var(--cream);letter-spacing:.04em}
+
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{order:-1;max-width:340px;margin:0 auto}
+  .gallery{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .wrap{width:min(calc(100% - 30px),var(--max))}
+  .nav{height:64px}
+  .navlinks a:not(.nav-x){display:none}
+  .hero{padding:56px 0 72px}
+  section{padding:72px 0}
+  .gallery{grid-template-columns:1fr}
+  .actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+  <a class="brand" href="#">
+    <span class="brand-jp">岡部のりゆき</span>
+    <span class="brand-en">ILLUSTRATOR</span>
+  </a>
+  <nav class="navlinks">
+    <a href="#works">作品</a>
+    <a href="#commission">ご依頼について</a>
+    <a href="#contact">お問い合わせ</a>
+    <a class="nav-x" href="https://x.com/33Noku" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.5-7.2L4.4 22H1.3l8.1-9.3L1 2h7.3l5 6.6L18.9 2zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20z"/></svg>
+      X DM
+    </a>
+  </nav>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="grain"></div>
+<div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow">ILLUSTRATOR&nbsp;/&nbsp;NOTPRITTY</div>
+    <div class="brand-name"><span class="last">岡部のりゆき</span></div>
+    <h1>かわいいを、<br>ひとつも<em>取りこぼさずに。</em></h1>
+    <div class="hero-divider"></div>
+    <p class="lead">キャラクターの「かわいい」を大切に、キュートで魅力的なイラストを制作しています。ご依頼・お仕事のご相談はメール、またはXのDMからお気軽にどうぞ。</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">イラストを依頼する</a>
+      <a class="btn secondary" href="#works">作品を見る</a>
+      <a class="btn x-btn" href="https://x.com/33Noku" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.5-7.2L4.4 22H1.3l8.1-9.3L1 2h7.3l5 6.6L18.9 2zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20z"/></svg>
+        Xでご相談
+      </a>
+    </div>
+    <div class="hero-note">✉ notpritty@gmail.com　／　𝕏 @33Noku（DM可）</div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-frame">
+      <img src="work-oc.jpg" alt="オリジナルキャラクター">
+      <div class="hero-badge">
+        <span class="en">FEATURED WORK — ORIGINAL CHARACTER</span>
+        <span class="jp">オリジナルキャラクター</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="works" class="on-cream">
+<div class="wrap">
+  <div class="section-title">
+    <span class="en">WORKS</span>
+    <h2>作品</h2>
+  </div>
+  <p class="works-note">※「Azur Lane」表記のある作品は、艦隊これくしょん「アズールレーン」の二次創作イラストです。</p>
+  <!--
+  ===== 作品タイトルを変更する場所 =====
+  例：<div class="work-title">TITLE</div>
+  ↑ この文字だけを書き換えればタイトルを変更できます。
+  ===== Azur Lane 表記の付け外し =====
+  <div class="work-category">の中の「Azur Lane 二次創作」／「Original Character」を書き換えれば表示が変わります。
+  -->
+<div class="gallery">
+
+  <article class="work featured">
+    <div class="work-frame"><img src="work-oc.jpg" alt="オリジナルキャラクター"></div>
+    <div class="work-info">
+      <div class="work-title">オリジナルキャラクター</div>
+      <div class="work-category oc">Original Character</div>
+    </div>
+  </article>
+
+  <article class="work">
+    <div class="work-frame"><img src="work-ponytail.jpg" alt="ポニーテールとセーラービキニ"></div>
+    <div class="work-info">
+      <div class="work-title">ポニーテールとセーラービキニ</div>
+      <div class="work-category oc">Original Character</div>
+    </div>
+  </article>
+
+  <article class="work">
+    <div class="work-frame"><img src="work-nagato.jpg" alt="長門（バニー）"></div>
+    <div class="work-info">
+      <div class="work-title">長門（バニー）</div>
+      <div class="work-category">Azur Lane 二次創作</div>
+    </div>
+  </article>
+
+  <article class="work">
+    <div class="work-frame"><img src="work-taihou.jpg" alt="大鳳（羅沙遊情）"></div>
+    <div class="work-info">
+      <div class="work-title">大鳳（羅沙遊情）</div>
+      <div class="work-category">Azur Lane 二次創作</div>
+    </div>
+  </article>
+
+  <article class="work">
+    <div class="work-frame"><img src="work-raffi2.jpg" alt="ラフィーII（ウサウサ城主の見回り休憩）"></div>
+    <div class="work-info">
+      <div class="work-title">ラフィーII（ウサウサ城主の見回り休憩）</div>
+      <div class="work-category">Azur Lane 二次創作</div>
+    </div>
+  </article>
+
+  <article class="work">
+    <div class="work-frame"><img src="work-elf.jpg" alt="TITLE"></div>
+    <div class="work-info">
+      <div class="work-title">TITLE</div>
+      <div class="work-category">Azur Lane 二次創作</div>
+    </div>
+  </article>
+
+</div>
+</div>
+</section>
+
+<section id="commission" class="on-cream">
+<div class="wrap">
+  <div class="section-title">
+    <span class="en">COMMISSION</span>
+    <h2>ご依頼について</h2>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <span class="num">01</span>
+      <h3>得意なイラスト</h3>
+      <p>女の子・美少女キャラクターを中心に、キュートで魅力的なキャラクターイラストを制作しています。</p>
+    </article>
+    <article class="card">
+      <span class="num">02</span>
+      <h3>制作の流れ</h3>
+      <div class="flow">
+        <div><b>01</b>お問い合わせ・ご相談</div>
+        <div><b>02</b>内容・納期・お見積り</div>
+        <div><b>03</b>ラフ制作・確認</div>
+        <div><b>04</b>清書・納品</div>
+      </div>
+    </article>
+    <article class="card">
+      <span class="num">03</span>
+      <h3>まずはお気軽に</h3>
+      <p>「こういう絵を描いてほしい」というご相談からでも大丈夫です。用途やご希望に合わせてご提案します。</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="grain"></div>
+<div class="wrap">
+  <div class="eyebrow">CONTACT</div>
+  <h2>あなたの「ほしい」を、<br>イラストにします。</h2>
+  <p>イラスト制作のご依頼・お仕事のご相談はこちらから。用途・納期・ご予算など、決まっている範囲でお気軽にご連絡ください。</p>
+  <div class="contact-actions">
+    <a class="btn primary" href="mailto:notpritty@gmail.com">✉ notpritty@gmail.com</a>
+    <a class="btn x-btn" href="https://x.com/33Noku" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7.1l-5.5-7.2L4.4 22H1.3l8.1-9.3L1 2h7.3l5 6.6L18.9 2zm-1.2 18h1.9L7.4 3.9H5.4L17.7 20z"/></svg>
+      XのDMでもご相談を承ります
+    </a>
+  </div>
+  <div class="contact-note">@33Noku</div>
+</div>
+</section>
+
+</main>
+<footer>© 2026 岡部のりゆき / Notpritty</footer>
+
+</body>
+</html>
